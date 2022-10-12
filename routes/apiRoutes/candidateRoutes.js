@@ -47,7 +47,7 @@ router.get('/candidate/:id', (req, res) => {
 
 // Create a candidate
 router.post('/candidate', ({ body }, res) => {
-
+    // Data validation
     const errors = inputCheck(body, 'first_name', 'last_name', 'industry_connected');
     if (errors) {
         res.status(400).json({ error: errors });
